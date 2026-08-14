@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: monitor-metano-satelital
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: EE_SERVICE_ACCOUNT_JSON
+        sync: false
+      - key: EE_PROJECT_ID
+        sync: false
