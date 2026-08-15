@@ -106,6 +106,6 @@ fetch('/metano/serie?dias=90')
     return HTMLResponse(html)
 
 
-@app.get("/health")
+@app.api_route("/health", methods=["GET", "HEAD"])
 def health():
     return {"status": "ok", "app": "Monitor de Metano Satelital"}
